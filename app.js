@@ -1,13 +1,15 @@
-function logName(name, surname){
-    console.log(`Мое имя ${name} ${surname}`);
+function powerOfTwo(num){
+    return num * num;
 }
 
-logName('Годжо','Сатору');
+console.log(powerOfTwo(5));
 
-function countDepositSum(depositinUSD, month, rate){
-    const sum = depositinUSD * (1 + rate / 12) ** month;
-    return sum
+// Это анонимная функция
+const poft = function(num){
+    return num *num;
 }
+console.log(poft(6))
 
-const example = countDepositSum(12000, 24, 0.07);
-console.log(example)
+// Стрелочная функция
+const sofr = num => num * num;
+console.log(sofr(4))
