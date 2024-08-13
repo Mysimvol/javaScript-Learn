@@ -1,12 +1,20 @@
-
+// Операторы присваивания
 let a = 'Hello';
 let b = 'penis';
 
 console.log(a + ', my name is ' + b);
-a = '13';
-b = '14';
-
-console.log(a + b + 5);
+let age = 18;
+age *= 2;
+age++; // age = age + 1
+age--; // age = age - 1
+console.log(age);
 /*
-принимает все зак конкатенацию то бишь склеивает цифры и переменные со словами
+операторы Сравнения
 */
+const vasia = 36;
+
+console.log(age > vasia);
+console.log(age >= vasia);
+console.log(age < vasia);
+console.log(age <= vasia);
+console.log(age == vasia);
