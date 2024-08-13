@@ -1,15 +1,12 @@
-const role = prompt();
+const balance = 1001;
+const bonusBalance = 101;
 
-switch (role){
-    case 'manager':
-        console.log('менеджер');
-        break;
-    case 'admin':
-        console.log('admin');
-        break;
-    case 'ceo':
-        console.log('CEO');
-        break;
-    default:
-        console.log('мы тебя не знаем')
+const statusBanned = false;
+const isExist = false;
+const isSelling = true;
+
+if((balance > 1000 || bonusBalance > 100) && !statusBanned && !isExist && isSelling){
+    console.log('Можешь купить игру');
+}   else{
+    console.log('Ты не можешь купить игру')
 }
