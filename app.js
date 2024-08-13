@@ -1,15 +1,8 @@
-function powerOfTwo(num){
-    return num * num;
+function toPower(num, power){
+    const res = num ** power;
+    return res;
 }
+console.log(toPower(2,4));
 
-console.log(powerOfTwo(5));
-
-// Это анонимная функция
-const poft = function(num){
-    return num *num;
-}
-console.log(poft(6))
-
-// Стрелочная функция
-const sofr = num => num * num;
-console.log(sofr(4))
+const toPowerArrow = (num, power) => num **power;
+console.log(toPowerArrow(2,5));
