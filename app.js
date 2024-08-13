@@ -1,15 +1,9 @@
-const hourPrice = 80;// часовая ставка 
-const myTimeday = 5; // сколько часов в день
-const myWeekjob = 5;// сколько дней в неделю
-let dayToweekend = 11 - 2; // дней до отпуска
-let zakazhour = 40; //на сколько чаосв заказ
+const money = 100;
 
-let zakazOnday = zakazhour / myTimeday; // сколько займет дней заказ
-console.log(zakazOnday + ' дней на заказ');
-
-// Смогу ли работать
-console.log(dayToweekend > zakazOnday);
-
-// сколько денег за работу
-let priceZajob = hourPrice * zakazhour;
-console.log(priceZajob + ' заработок за заказ');
+if(money > 90){
+    console.log('вы можете купить продукт');
+}   else if (money > 50) {
+    console.log('Можешь купить Доширака с говнядиной');
+}   else{
+    console.log('No money Бомж блят');
+}
