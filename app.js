@@ -1,24 +1,15 @@
-// Типы данных
-// Это объект
-const user = {
-    name: 'Вася',
-    age: 21,
-};
+const hourPrice = 80;// часовая ставка 
+const myTimeday = 5; // сколько часов в день
+const myWeekjob = 5;// сколько дней в неделю
+let dayToweekend = 11 - 2; // дней до отпуска
+let zakazhour = 40; //на сколько чаосв заказ
 
-// Это примитивы
-// Числа
-const age = 18;
-// Строки
-const surname = 'Пенис';
-// булевые значения правда или ложь
-// const isAdmin = true;
-//  Незаданное значение
-// const isAdmin = undefined;
-// Пустое значение
-let data = null;
-// Cпециальные Symbol и BigInt
+let zakazOnday = zakazhour / myTimeday; // сколько займет дней заказ
+console.log(zakazOnday + ' дней на заказ');
 
-let a = '5';
-let b = 5.5;
-// Оператор typeof покажет к какому типу данных будет принадлежать
-console.log(typeof a);
+// Смогу ли работать
+console.log(dayToweekend > zakazOnday);
+
+// сколько денег за работу
+let priceZajob = hourPrice * zakazhour;
+console.log(priceZajob + ' заработок за заказ');
