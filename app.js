@@ -1,12 +1,13 @@
-const balance = 1001;
-const bonusBalance = 101;
-
-const statusBanned = false;
-const isExist = false;
-const isSelling = true;
-
-if((balance > 1000 || bonusBalance > 100) && !statusBanned && !isExist && isSelling){
-    console.log('Можешь купить игру');
-}   else{
-    console.log('Ты не можешь купить игру')
+function logName(name, surname){
+    console.log(`Мое имя ${name} ${surname}`);
 }
+
+logName('Годжо','Сатору');
+
+function countDepositSum(depositinUSD, month, rate){
+    const sum = depositinUSD * (1 + rate / 12) ** month;
+    return sum
+}
+
+const example = countDepositSum(12000, 24, 0.07);
+console.log(example)
