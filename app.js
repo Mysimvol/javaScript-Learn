@@ -1,20 +1,24 @@
-// Операторы присваивания
-let a = 'Hello';
-let b = 'penis';
+// Типы данных
+// Это объект
+const user = {
+    name: 'Вася',
+    age: 21,
+};
 
-console.log(a + ', my name is ' + b);
-let age = 18;
-age *= 2;
-age++; // age = age + 1
-age--; // age = age - 1
-console.log(age);
-/*
-операторы Сравнения
-*/
-const vasia = 36;
+// Это примитивы
+// Числа
+const age = 18;
+// Строки
+const surname = 'Пенис';
+// булевые значения правда или ложь
+// const isAdmin = true;
+//  Незаданное значение
+// const isAdmin = undefined;
+// Пустое значение
+let data = null;
+// Cпециальные Symbol и BigInt
 
-console.log(age > vasia);
-console.log(age >= vasia);
-console.log(age < vasia);
-console.log(age <= vasia);
-console.log(age == vasia);
+let a = '5';
+let b = 5.5;
+// Оператор typeof покажет к какому типу данных будет принадлежать
+console.log(typeof a);
