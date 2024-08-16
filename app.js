@@ -1,23 +1,34 @@
-const roles = ['admin', 'user', 'manager', 'superuser'];
-console.log(roles);
-// массив начнется со второго номера элемента 
-const slice1 = roles.slice(2);
-console.log(slice1);
-// Массив начнется со второго элемента и закончится до 3
-const slice2 = roles.slice(2, 3);
-console.log(slice2);
-// этот метод берет последний элемент в массиве в качестве начала
-const slice3 = roles.slice(-1);
-console.log(slice3);
-// Разделяет массив и модифицирует.
-// const slice4 = roles.splice(2);
-// console.log(slice4);
-// console.log(roles)
+const tasks = ['Задача1', 'Задача2', 'Задача3', 'Задача4'];
 
-// Обратный порядок массива и модифицирует массив
-const rel = roles.reverse();
-console.log(rel);
+function addTask(arg){
+    return tasks.push(arg);
+}
 
-const newRoles = ['sisadmin', 'developer'];
-const rel1 = roles.concat(newRoles);
-console.log(rel1);
+addTask('piska')
+console.log(tasks)
+
+deleteTask('Задача1')
+function deleteTask(task){
+    const rel = tasks.indexOf(task);
+    // return console.log(rel);
+    if (rel >= 0 ){
+        tasks.splice(rel, 1);
+        console.log(tasks);
+    } else{
+        console.log('Такой задачи нет')
+    }
+}
+
+beginTask('Задача4')
+function beginTask(task){
+    const rel = tasks.indexOf(task);
+    if(rel >= 0 ){
+        const oldTask = tasks[rel];
+        tasks.splice(rel,1);
+        tasks.unshift(oldTask);
+        console.log(tasks)
+    }   else{
+        console.log('Не правильная задача')
+    }
+    return
+}
