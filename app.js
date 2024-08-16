@@ -1,7 +1,7 @@
-const arr = ['!', 'JS', 'люблю', 'Я'];
-const resultArray = [];
+const tasks = [[4, 'Задача 4'], [2, 'Задача 2']];
 
-for(let i = arr.length -1; i >= 0; i--){
-    resultArray.push(arr[i]);
+for (let i = 0; i < tasks.length; i++) {
+	for(let j = 0; j < tasks[i].length; j++) {
+		console.log(tasks[i][j]);
+	}
 }
-console.log(resultArray.join(' '));
