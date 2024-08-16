@@ -1,16 +1,11 @@
-const users = ['Аня', 'Вика', 'Катя'];
-console.log(users);
-users[2] = 'кристина';
+const roles = ['admin', 'user', 'manager'];
+console.log(roles);
+// Перебор массива по строчному имени
+console.log(roles.indexOf('user'));
+console.log(roles.indexOf('superuser'));
 
-// Добавить в конец массива данные
-users.push('Максим');
-console.log(users);
-// Добавить в начало данные
-users.unshift('Петя');
-console.log(users);
-// Удалить Последний элемент из массива
-users.pop();
-console.log(users);
-// Удалить первый элемент из массива
-users.shift();
-console.log(users);
+if (roles.indexOf('user') >= 0){
+    console.log('доступ есть');
+}
+// Делаем запрос есть ли элемент с этим именем
+console.log(roles.includes('admin'));
