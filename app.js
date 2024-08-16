@@ -1,14 +1,3 @@
-const url = 'https://purpleschool.ru/course/javascript'
-const res = url.split('//')
-console.log(res)
-
-function massivUrl(arg){
-    const url = arg;
-    const result = url.split('/');
-    const [http, _, name, ...others] = result;
-    console.log(http, name, '/' + others.join('/'));
-    console.log(`Протокол: ${http}`);
-    console.log(`Доменное имя: ${name}`)
-    console.log(`Библиотека /${others.join('/')}`)
+for(let i = 1; i <= 5; i++){
+    console.log(`Ваш баланс ${i}$`)
 }
-massivUrl('https://purpleschool.ru/course/javascript')
