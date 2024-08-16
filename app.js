@@ -1,11 +1,16 @@
-const role1 = 'admin'
-const role2 = 'user'
-const role3 = 'superuser'
+const users = ['Аня', 'Вика', 'Катя'];
+console.log(users);
+users[2] = 'кристина';
 
-const roles = ['admin', 'user', 'superuser'];
-
-console.log(roles[1]);
-
-console.log(roles[roles.length - 1]);
-
-console.log(roles.at(-1));
+// Добавить в конец массива данные
+users.push('Максим');
+console.log(users);
+// Добавить в начало данные
+users.unshift('Петя');
+console.log(users);
+// Удалить Последний элемент из массива
+users.pop();
+console.log(users);
+// Удалить первый элемент из массива
+users.shift();
+console.log(users);
