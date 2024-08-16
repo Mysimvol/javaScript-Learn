@@ -1,16 +1,11 @@
-function credit(age, hasJob = false){
-    switch (true){
-        case age > 24 && hasJob:
-            return 500;
-        case age > 24:
-            return 100;
-        default:
-            return 0;
-    }           
-}
+const role1 = 'admin'
+const role2 = 'user'
+const role3 = 'superuser'
 
-function canBuy(productPrice, age, money, hasJob = false){
-    const creditMoney = credit(age, hasJob);
-    return productPrice <= money + creditMoney;
-}
-console.log(canBuy(2000, 26, 1500, true));
+const roles = ['admin', 'user', 'superuser'];
+
+console.log(roles[1]);
+
+console.log(roles[roles.length - 1]);
+
+console.log(roles.at(-1));
