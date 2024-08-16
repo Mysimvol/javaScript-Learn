@@ -1,8 +1,16 @@
-function toPower(num, power){
-    const res = num ** power;
-    return res;
+function credit(age, hasJob = false){
+    switch (true){
+        case age > 24 && hasJob:
+            return 500;
+        case age > 24:
+            return 100;
+        default:
+            return 0;
+    }           
 }
-console.log(toPower(2,4));
 
-const toPowerArrow = (num, power) => num **power;
-console.log(toPowerArrow(2,5));
+function canBuy(productPrice, age, money, hasJob = false){
+    const creditMoney = credit(age, hasJob);
+    return productPrice <= money + creditMoney;
+}
+console.log(canBuy(2000, 26, 1500, true));
