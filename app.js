@@ -1,14 +1,49 @@
+const operations = [1000, -700, 300, -500, 10000];
+const startBalance = 100;
 
-const arr = [1,4,5,2,5,'sdjgsl'];
 
-for(let i = 0; i < arr.length; i++){
-    console.log(arr[i])
+let sum = 0;
+function getBalance(arrayOfOperations, initialBalance){
+    let balance = initialBalance;
+    for(const element of arrayOfOperations){
+        balance +=element;
+    }
+    return balance;
+}
+console.log(getBalance(operations, startBalance));
+
+function checkOperations(arrayOfOperations, initialBalance,){
+    let balance = initialBalance;
+    let isOk = true
+    for(const element of arrayOfOperations){
+        balance += element;
+        if (balance < 0){
+            isOk = false;
+            break;
+        }
+    }
+    return isOk;
 }
 
-for(let element of arr){
-    console.log(element)
+console.log(checkOperations(operations, startBalance));
+
+
+function avarageOperation(arrayOfOperations){
+    let positivCount = 0;
+    let positivSumm = 0;
+    let negativCount = 0;
+    let negativSumm = 0;
+    for(const element of arrayOfOperations){
+        if(element > 0){
+            positivCount++;
+            positivSumm += element;
+        }
+        if (element < 0){
+        negativCount++;
+        negativSumm +=element;
+        }
+    }   
+    return [positivSumm / positivCount, negativSumm / negativCount]
 }
 
-for( let index in arr){
-    console.log(index)
-}
+console.log(avarageOperation(operations));
